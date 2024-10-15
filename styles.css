@@ -1,0 +1,212 @@
+/* Include the padding and border in an element's total width and height */
+/* Incluye el relleno y el borde en el ancho y alto total de un elemento */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  background-color: #222;
+}
+
+body {
+  margin: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.contenedor-input_btn{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+h1, h4{
+  margin: 2%;
+}
+
+p{
+  padding: 1%;
+  word-wrap: break-word;
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #000;
+  background-color: #6495ED;
+}
+
+
+/* Remove margins and padding from the list */
+/* Eliminar márgenes y relleno de la lista */
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+/* Dar estilo a los elementos de la lista */
+ul li{
+  list-style-type: none;
+  cursor: pointer;
+  position: relative;
+  padding: 16px 12px 16px 40px;
+  /* margin: 0.2%; */
+  background-color: #eee;
+  transition: 0.2s;
+  /* make the list items unselectable */
+  /* hacer que los elementos de la lista no se puedan seleccionar */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+/* Establecer todos los elementos impares de la lista en un color diferente (efecto - rayas de cebra) */
+ul li:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+/* Color de fondo más oscuro al pasar el mouse */
+ul li:hover {
+  background-color: #ddd;
+}
+
+/* Add a "checked" mark when clicked on */
+/*Agrega una marca de "marcado" al hacer clic en */
+ul li.checked {
+  background: #888;
+  color: #000;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+/*Agrega una marca de "marcado" al hacer clic en algun elemneto*/
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #000;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 14px;
+  width: 7px;
+}
+
+/* Style the close button */
+/* Dar estilo al botón de cierre */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 16px 8px 16px 8px;
+  background-color: #888;
+  color: white;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+/* Dar estilo al encabezado */
+header {
+  /* background-color: #f44336; */
+  background-color: #6495ED;
+  padding: 5px 10px;
+  text-align: start;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Clear floats after the header */
+/* Limpiar los flotantes después del encabezado */
+
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+/* Dar estilo a la entrada */
+input {
+  
+  border: 1px solid #777;
+  border-radius: 10px;
+  width: 70%;
+  padding: 13px;
+  margin: 1%;
+  float: left;
+}
+
+input::placeholder{
+  vertical-align: bottom; /* Alinea el texto del placeholder en la parte inferior */
+  line-height: 1.5; /* Ajusta la altura de línea según sea necesario */
+  color: #777;
+  font-style: italic;
+  font-weight: bold;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the "Add" button */
+/* Dale estilo al botón "Agregar" */
+.contenedor-input_btn button{
+  border: 1px solid #777;
+  border-radius: 10px;
+  padding: 13px;
+  width: 30%;
+  background: #98FB98;
+  color: white;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000;
+}
+
+.contenedor-input_btn button:hover {
+  background-color: #45a049;
+  color: white;
+  border: none;
+}
+
+.fa-duotone{
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+footer {
+  margin: 4% 3%;
+  text-align: end;
+  line-height: 1.3;
+  border-top: 2px solid #888;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Task Tracker - The To Do List</title>
+</head>
+
+<body>
+  <header>
+    <div id="newTask" class="header">
+      <h1>Task Tracker</h1>
+      <div class="contenedor-input_btn">
+        <!-- <input type="text" id="taskInput" placeholder="Start writing and press enter  to create task..."> -->
+        <input type="text" id="taskInput" placeholder='Escriba la nueva tarea y presione " Add + " para crearla...'>
+        <button onclick="newElement()" class="addBtn"> Add <i class="fa-duotone fa-solid fa-circle-plus"></i> </>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <p>"Hacer click en la tarea finalizada para tacharla o devolver a la lista de pendientes."</p>
+    <ul id="taskList">
+      <!-- tasks will be dynamically added here -->
+      <!--las tareas se agregarán dinámicamente aquí -->
+
+      <!-- <li>Se crea una nueva tarea y se agrega a la lista.</li> -->
+      <!-- <li>Al hacer clic en la casilla de verificación se alterna la integridad</li> -->
+      <!-- <li>El botón Eliminar eliminará la tarea de la lista.</li> -->
+      <!-- <li>Marcarlo como completo lo devolverá a la lista de pendientes.</li> -->
+      <li>Diseño y Desarrollo de Software</li>
+      <li>Depuración y Resolución de Problemas</li>
+      <li>Mantenimiento y Actualización</li>
+      <li>Colaboración en Equipos</li>
+      <li>Aprendizaje Continuo</li>
+      <!-- <li class="checked">Las tareas completas se muestran al final tachadas</li> -->
+    </ul>
+  </main>
+
+  <footer>
+    <h4>Author: Jairo Cárdenas<br>
+      <a href="mailto:jairo.cardenas.dev@gmail.com">jairo.cardenas.dev@gmail.com</a>
+    </h4>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
